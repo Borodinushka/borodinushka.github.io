@@ -377,6 +377,17 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 .xacc .xp:nth-of-type(2) .res { background: #e3d6ff; }
 .xacc .xp:nth-of-type(3) .res { background: #f8c8dc; }
 .xacc .xp:nth-of-type(4) .res { background: #ffe0cc; }
+
+.cc[href="#case-shots"] .thumb { background: linear-gradient(135deg, #cdbdf7 0%, #f6b6d0 45%, #ff9a6c 100%); }
+.cc[href="#case-nobullshit"] .thumb { background: linear-gradient(135deg, #ff9a6c 0%, #f6b6d0 55%, #cdbdf7 100%); }
+.cc[href="#case-illumur"] .thumb { background: linear-gradient(135deg, #cdbdf7 0%, #f6b6d0 50%, #ffc9a8 100%); }
+.cc[href="#case-gng"] .thumb { background: linear-gradient(135deg, #f6b6d0 0%, #ff9a6c 55%, #ffe0cc 100%); }
+.reel { display: grid; gap: clamp(12px, 2vw, 24px); margin-top: clamp(28px, 5vw, 56px); }
+.reel-item { position: relative; background: linear-gradient(135deg, #ffd2b8, #f8c8dc 55%, #e3d6ff); aspect-ratio: 16 / 10; overflow: hidden; }
+.reel-item.ok { aspect-ratio: auto; background: none; }
+.reel-item .ph { position: absolute; inset: 0; display: grid; place-items: center; color: rgba(12,11,15,.55); }
+.reel-item video { position: relative; display: block; width: 100%; height: auto; }
+.reel-item.ok .ph { display: none; }
 </style>
 
 <div class="layout">
@@ -435,6 +446,9 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
     <div class="inner">
       <h2 class="big-h rv">Проекты</h2>
       <div class="case-grid">
+        <a class="cc rv" href="#case-shots">
+          <div class="thumb"><span class="hov"><span class="mono">Анимированные экраны, виджеты и десктопы</span><b>Шоты</b><i aria-hidden="true">↗</i></span></div>
+        </a>
         <a class="cc rv" href="#case-nobullshit">
           <div class="thumb" style="--tc: #ffd2b8"><span class="hov"><span class="mono">Лендинги онлайн-школ</span><b>No Bullshit и Art Jungle</b><i aria-hidden="true">↗</i></span></div>
         </a>
@@ -484,6 +498,13 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 </div>
 <div id="caseview" hidden>
     <div class="inner">
+      <article class="cp shots" id="cp-shots" hidden>
+        <a class="back mono" href="#cases">← Все кейсы</a>
+        <p class="mono">Анимированные экраны, виджеты и десктопы</p>
+        <h1>Шоты</h1>
+        <div class="reel"><div class="reel-item"><span class="ph mono">Видео 01</span><video src="shots/01.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 02</span><video src="shots/02.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 03</span><video src="shots/03.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 04</span><video src="shots/04.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 05</span><video src="shots/05.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 06</span><video src="shots/06.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 07</span><video src="shots/07.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 08</span><video src="shots/08.mp4" autoplay muted loop playsinline preload="metadata"></video></div></div>
+        <nav class="cp-next" aria-label="Другие кейсы"><a href="#cases">← Все кейсы</a></nav>
+      </article>
       <article class="cp" id="cp-nobullshit" hidden>
         <a class="back mono" href="#cases">← Все кейсы</a>
         <p class="mono">Лендинги онлайн-школ</p>
@@ -691,6 +712,14 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
   });
   window.addEventListener('hashchange', function () { var id = location.hash.slice(1); if (id) navigate(id); });
   if (/^#(case-|me$)/.test(location.hash)) navigate(location.hash.slice(1));
+
+  /* шоты: видео идут друг за другом, играют только когда видны */
+  var vids = document.querySelectorAll('.reel video');
+  vids.forEach(function (v) { v.muted = true; v.addEventListener('loadedmetadata', function () { v.parentNode.classList.add('ok'); }); });
+  if ('IntersectionObserver' in window) {
+    var vo = new IntersectionObserver(function (es) { es.forEach(function (e) { var v = e.target; if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { v.pause(); } }); }, { threshold: .25 });
+    vids.forEach(function (v) { vo.observe(v); });
+  }
 
   /* стикеры: картинки с прозрачным фоном рисуются один раз и дальше работают как обычные img */
   window.addEventListener('load', function () {
