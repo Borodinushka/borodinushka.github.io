@@ -390,6 +390,12 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 .reel-item.ok .ph { display: none; }
 .reel-item.ok { display: flex; justify-content: center; align-items: center; }
 .reel-item video { width: auto; height: auto; max-width: 100%; max-height: calc(100dvh - 130px); margin: 0 auto; }
+
+.reel-item, .reel-item.ok { background: var(--bg); }
+.reel-item:not(.ok) { border: 1px solid var(--ink); }
+.reel-item.ok { aspect-ratio: auto; border: 0; }
+.reel-item:first-child video { max-height: max(240px, calc(100dvh - 330px)); }
+.shots .reel { margin-top: clamp(16px, 2.4vw, 28px); }
 </style>
 
 <div class="layout">
@@ -504,7 +510,7 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
         <a class="back mono" href="#cases">← Все кейсы</a>
         <p class="mono">Анимированные экраны, виджеты и десктопы</p>
         <h1>Шоты</h1>
-        <div class="reel"><div class="reel-item"><span class="ph mono">Видео 01</span><video src="shots/01.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 02</span><video src="shots/02.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 03</span><video src="shots/03.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 04</span><video src="shots/04.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 05</span><video src="shots/05.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 06</span><video src="shots/06.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 07</span><video src="shots/07.mp4" autoplay muted loop playsinline preload="metadata"></video></div><div class="reel-item"><span class="ph mono">Видео 08</span><video src="shots/08.mp4" autoplay muted loop playsinline preload="metadata"></video></div></div>
+        <div class="reel"><div class="reel-item"><span class="ph mono">Видео 01</span><video src="shots/01.mp4" autoplay muted loop playsinline preload="metadata" onloadedmetadata='this.parentNode.classList.add("ok")'></video></div><div class="reel-item"><span class="ph mono">Видео 02</span><video src="shots/02.mp4" autoplay muted loop playsinline preload="metadata" onloadedmetadata='this.parentNode.classList.add("ok")'></video></div><div class="reel-item"><span class="ph mono">Видео 03</span><video src="shots/03.mp4" autoplay muted loop playsinline preload="metadata" onloadedmetadata='this.parentNode.classList.add("ok")'></video></div><div class="reel-item"><span class="ph mono">Видео 04</span><video src="shots/04.mp4" autoplay muted loop playsinline preload="metadata" onloadedmetadata='this.parentNode.classList.add("ok")'></video></div><div class="reel-item"><span class="ph mono">Видео 05</span><video src="shots/05.mp4" autoplay muted loop playsinline preload="metadata" onloadedmetadata='this.parentNode.classList.add("ok")'></video></div><div class="reel-item"><span class="ph mono">Видео 06</span><video src="shots/06.mp4" autoplay muted loop playsinline preload="metadata" onloadedmetadata='this.parentNode.classList.add("ok")'></video></div><div class="reel-item"><span class="ph mono">Видео 07</span><video src="shots/07.mp4" autoplay muted loop playsinline preload="metadata" onloadedmetadata='this.parentNode.classList.add("ok")'></video></div><div class="reel-item"><span class="ph mono">Видео 08</span><video src="shots/08.mp4" autoplay muted loop playsinline preload="metadata" onloadedmetadata='this.parentNode.classList.add("ok")'></video></div></div>
         <nav class="cp-next" aria-label="Другие кейсы"><a href="#cases">← Все кейсы</a></nav>
       </article>
       <article class="cp" id="cp-nobullshit" hidden>
@@ -717,7 +723,7 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 
   /* шоты: видео идут друг за другом, играют только когда видны */
   var vids = document.querySelectorAll('.reel video');
-  vids.forEach(function (v) { v.muted = true; v.addEventListener('loadedmetadata', function () { v.parentNode.classList.add('ok'); }); });
+  vids.forEach(function (v) { v.muted = true; if (v.readyState >= 1) v.parentNode.classList.add('ok'); v.addEventListener('loadedmetadata', function () { v.parentNode.classList.add('ok'); }); v.addEventListener('loadeddata', function () { v.parentNode.classList.add('ok'); }); });
   if ('IntersectionObserver' in window) {
     var vo = new IntersectionObserver(function (es) { es.forEach(function (e) { var v = e.target; if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { v.pause(); } }); }, { threshold: .25 });
     vids.forEach(function (v) { vo.observe(v); });
