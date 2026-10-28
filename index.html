@@ -1762,9 +1762,9 @@ h3{font-weight:700}
 </main>
 </div>
 <style>/* оформление под сайт: белый фон, чёрные линии 1px, шрифты как на сайте. Экраны приложения не трогаем */
-:root{--bg:#fff;--surface:#fff;--ink:#0c0b0f;--muted:#6a6473;--line:#0c0b0f;--lime:#f07a4d;--on-lime:#0c0b0f;--navy:#fff;--navy2:#fff;--red:#d6453d;--red-soft:transparent;--green:#1a8a5a;--green-soft:transparent;--amber-soft:transparent;
+:root{--bg:#fff;--surface:#fff;--ink:#0c0b0f;--muted:#6a6473;--line:#0c0b0f;--lime:#f07a4d;--on-lime:#0c0b0f;--navy:#0c0b0f;--navy2:#0c0b0f;--red:#d6453d;--red-soft:transparent;--green:#1a8a5a;--green-soft:transparent;--amber-soft:transparent;
   --f-d:"Manrope","TT Hoves Pro",Arial,sans-serif;--f-b:"Manrope","TT Hoves Pro",Arial,sans-serif;--f-m:"JetBrains Mono",ui-monospace,Menlo,monospace}
-:root[data-theme="dark"]{--bg:#0d0c10;--surface:#0d0c10;--ink:#f4eff3;--muted:#a59eae;--line:#f4eff3;--navy:#0d0c10;--navy2:#0d0c10;--red:#ff7a70;--green:#4cd392;--red-soft:transparent;--green-soft:transparent;--amber-soft:transparent}
+:root[data-theme="dark"]{--bg:#0d0c10;--surface:#0d0c10;--ink:#f4eff3;--muted:#a59eae;--line:#f4eff3;--navy:#f4eff3;--navy2:#f4eff3;--red:#ff7a70;--green:#4cd392;--red-soft:transparent;--green-soft:transparent;--amber-soft:transparent}
 .app,.gp,.lock,.mini-app,.hero-phones{--lime:#F2B81C;--on-lime:#1C2410}
 body{font-weight:500;line-height:1.4;-webkit-font-smoothing:antialiased}
 h1,h2{text-transform:uppercase;font-weight:500;letter-spacing:-.045em;line-height:.95}
@@ -1809,6 +1809,21 @@ footer{border-top:1px solid var(--ink)}
 .lp.coin-l,.proc .me,.fo:first-child,.uf .n.q{background:transparent;color:var(--ink);border:1px solid var(--lime);font-weight:500}
 .uf .n.q,.fill,.lp,.fo,.proc>*{border-radius:0}
 .app,.gp{box-shadow:none!important}
+
+/* user flow: минималистичная схема */
+.uf{border-radius:0;background:transparent;border:1px solid var(--ink);padding:24px;gap:18px}
+.uf .n{border-radius:0;background:transparent;border:1px solid var(--ink);color:var(--ink);font-weight:500}
+.uf .n.st{background:var(--ink);color:var(--bg);border-color:var(--ink);border-radius:999px}
+.uf .n.key{background:var(--lime);color:#0c0b0f;border-color:var(--lime);font-weight:600}
+.uf .n.q{background:transparent;color:var(--ink);border:1px solid var(--lime);border-radius:999px;font-weight:600}
+.uf .n.ok{background:transparent;color:var(--green);border:1px solid var(--green);font-weight:600}
+.uf .n.bad{background:transparent;color:var(--red);border:1px solid var(--red);font-weight:500}
+.uf .a{background:var(--ink);opacity:1;height:1px;width:34px}
+.uf .a::after{border-left-color:var(--ink);top:-4px}
+.uf .lbl{color:var(--ink)}
+.uf{min-width:0}.uf .a{width:20px}.uf .n{padding:8px 10px;font-size:12.5px}.uf .sp{width:60px}.uf-row.sub{padding-left:100px}.uf .n.ghost{width:100px}.uf .n.bad{max-width:260px}
+.princ div,.pi,.eco div,.funnel,.role,.tbl,.comp,.au-card,.mech-c,.nb,.rs,.ia-b,.desk,.draft,.st-row,.tk,.s3,.pr,.pr-card,.drop,.q-opts span,.lp,.fo,.stepper span,.proc span{border-radius:0}
+.uf{padding:16px}.uf .a{width:14px}.uf .n{padding:8px 9px;font-size:12px}.uf .sp{width:40px}.uf .lbl{padding:0 6px}.uf-row.sub{padding-left:90px}.uf .n.ghost{width:90px}
 </style></body></html></script>
 <script>(function () {
   var root = document.documentElement;
