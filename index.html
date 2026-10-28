@@ -406,6 +406,7 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 /* кейс «Грядка» во встроенном окне: на всю ширину колонки */
 #cp-gryadka { padding-bottom: 0; }
 #cp-gryadka iframe { display: block; width: calc(100% + 16px); margin-left: -16px; border: 0; min-height: 80vh; background: transparent; }
+#cp-gryadka .back { position: static; }
 </style>
 
 <div class="layout">
@@ -572,7 +573,7 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 
 <div class="rain" id="rain" aria-hidden="true"></div>
 
-<script type="text/plain" id="gr-src"><!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0}section[id]{scroll-margin-top:84px}</style></head><body><title>Грядка: слово, которое растёт</title>
+<script type="text/plain" id="gr-src"><!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap"><style>html,body{margin:0}section[id]{scroll-margin-top:84px}</style></head><body><title>Грядка: слово, которое растёт</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700;800&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -1760,7 +1761,55 @@ h3{font-weight:700}
 
 </main>
 </div>
-</body></html></script>
+<style>/* оформление под сайт: белый фон, чёрные линии 1px, шрифты как на сайте. Экраны приложения не трогаем */
+:root{--bg:#fff;--surface:#fff;--ink:#0c0b0f;--muted:#6a6473;--line:#0c0b0f;--lime:#f07a4d;--on-lime:#0c0b0f;--navy:#fff;--navy2:#fff;--red:#d6453d;--red-soft:transparent;--green:#1a8a5a;--green-soft:transparent;--amber-soft:transparent;
+  --f-d:"Manrope","TT Hoves Pro",Arial,sans-serif;--f-b:"Manrope","TT Hoves Pro",Arial,sans-serif;--f-m:"JetBrains Mono",ui-monospace,Menlo,monospace}
+:root[data-theme="dark"]{--bg:#0d0c10;--surface:#0d0c10;--ink:#f4eff3;--muted:#a59eae;--line:#f4eff3;--navy:#0d0c10;--navy2:#0d0c10;--red:#ff7a70;--green:#4cd392;--red-soft:transparent;--green-soft:transparent;--amber-soft:transparent}
+.app,.gp,.lock,.mini-app,.hero-phones{--lime:#F2B81C;--on-lime:#1C2410}
+body{font-weight:500;line-height:1.4;-webkit-font-smoothing:antialiased}
+h1,h2{text-transform:uppercase;font-weight:500;letter-spacing:-.045em;line-height:.95}
+h1{font-size:clamp(2.2rem,5.6vw,4.6rem)}
+h2{font-size:clamp(1.7rem,3.6vw,2.8rem)}
+h3{font-weight:600;letter-spacing:-.03em}
+.p{color:var(--muted);font-size:16px}
+.hero{background:transparent;color:var(--ink);padding-block:16px 40px}
+.hero .lead{color:var(--muted)}
+.eyebrow{color:var(--muted)}
+.chips span{border:1px solid var(--ink);color:var(--ink);background:transparent;font-weight:500}
+.kpis{border-top:1px solid var(--ink)}
+.kpis strong{color:var(--lime);font-weight:500}
+.kpis span{color:var(--muted)}
+.toc a{border:1px solid var(--ink);background:transparent;border-radius:999px;font-weight:500}
+.toc a:hover{background:var(--ink);color:var(--bg)}
+.sh .num{background:transparent;color:var(--ink);border:1px solid var(--ink);font-weight:500}
+.tile,.m-step,.t,.ins-i,.opt-c,.mx-i,.vs-c,.ba,.cjm,.rename,.cmp-t,.ps,.job,.rename{border-radius:0;box-shadow:none;background:transparent;border:1px solid var(--ink);color:var(--ink)}
+.t{border-collapse:collapse}.t th,.t td{border-bottom:1px solid var(--ink)}
+.tile.quote,.mx-i.main,.job,.vs-c.good,.m-step.ok{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.tile.quote .kick,.mx-i.main .kick,.job .kick,.vs-c.good .kick{color:var(--muted);opacity:1}
+.mx-i.main strong{color:var(--lime)}
+.mx-i.main>span:last-child,.m-step.ok span:last-child,.m-step.ok .m-n{color:var(--muted);opacity:1}
+.vs-c.good{border-left:4px solid var(--lime)}
+.opt-c.win{border:1px solid var(--ink);box-shadow:inset 4px 0 0 var(--lime)}
+.win-tag{background:transparent;color:var(--ink);border:1px solid var(--ink);border-radius:999px}
+.decision{border-left:4px solid var(--lime)}
+.ins-c q{border-left:4px solid var(--lime)}
+.ins-to{border-radius:0;background:transparent;border:1px solid var(--ink)}
+.dl li{border-left:1px solid var(--ink)}
+.sev,.fl span,.cjm-r .pain{border-radius:0}
+.fl span{background:transparent;border:1px solid var(--ink)}
+.fl span.x{border-color:var(--red)}
+.fl.good span{background:transparent;color:var(--ink);border-color:var(--ink)}
+.c-axis{stroke:var(--ink)}.c-pt{fill:var(--lime)}
+.cjm-r.h div{border-top:1px solid var(--ink)}
+.ct-r{border-top:1px solid var(--ink)}
+.dots6 i{border-color:var(--ink)}
+code{background:transparent;border:1px solid var(--ink);border-radius:0}
+.asis img{border-radius:0;border:1px solid var(--ink)}
+footer{border-top:1px solid var(--ink)}
+.lp.coin-l,.proc .me,.fo:first-child,.uf .n.q{background:transparent;color:var(--ink);border:1px solid var(--lime);font-weight:500}
+.uf .n.q,.fill,.lp,.fo,.proc>*{border-radius:0}
+.app,.gp{box-shadow:none!important}
+</style></body></html></script>
 <script>(function () {
   var root = document.documentElement;
   root.classList.add('js');
