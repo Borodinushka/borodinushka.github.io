@@ -47,7 +47,7 @@ ul { list-style: none; }
 .burger i::after { position: absolute; top: 7px; }
 .menu { position: fixed; inset: 0; z-index: 65; background: var(--bg); display: none; flex-direction: column; justify-content: center; padding: 88px max(16px, env(safe-area-inset-left, 0px)) 40px; }
 .menu.open { display: flex; }
-.menu a { font-size: clamp(2.2rem, 8vw, 5rem); line-height: 1.05; letter-spacing: -.04em; text-transform: uppercase; text-decoration: none; padding: 6px 0; border-bottom: 1px solid var(--ink); }
+.menu a { font-size: clamp(2.2rem, 8vw, 5rem); line-height: 1.05; letter-spacing: -.025em; text-transform: uppercase; text-decoration: none; padding: 6px 0; border-bottom: 1px solid var(--ink); }
 .menu a:hover { color: var(--orange); }
 .menu .tg-theme { margin-top: 24px; align-self: flex-start; border: 1px solid var(--line); background: transparent; color: var(--ink); padding: 12px 20px; font: inherit; cursor: pointer; text-transform: uppercase; font-size: .85rem; }
 
@@ -60,48 +60,48 @@ ul { list-style: none; }
 .f-a { transform: translateZ(calc(var(--s) / 2)); }
 .f-b { transform: rotateY(90deg) translateZ(calc(var(--s) / 2)); }
 .f-c { transform: rotateX(90deg) translateZ(calc(var(--s) / 2)); }
-.f-a .big { position: absolute; left: 4%; top: -6%; font-family: var(--font-serif); font-weight: 700; font-size: calc(var(--s) * .62); line-height: .82; letter-spacing: -.04em; }
+.f-a .big { position: absolute; left: 4%; top: -6%; font-family: var(--font-serif); font-weight: 700; font-size: calc(var(--s) * .62); line-height: .82; letter-spacing: -.025em; }
 .f-a .big span { display: block; }
 .f-c { display: flex; flex-direction: column; justify-content: center; gap: 2%; padding: 8%; font-family: var(--font-serif); }
-.f-c b { font-size: calc(var(--s) * .3); line-height: .9; font-weight: 700; letter-spacing: -.04em; }
+.f-c b { font-size: calc(var(--s) * .3); line-height: .9; font-weight: 700; letter-spacing: -.025em; }
 .f-c i { font-size: calc(var(--s) * .2); line-height: .95; font-weight: 400; }
 .f-b { display: flex; flex-direction: column; justify-content: center; gap: calc(var(--s) * .06); padding: 8% 8% 8% 22%; }
 .f-b p { font-size: calc(var(--s) * .068); line-height: 1.05; text-transform: uppercase; letter-spacing: -.02em; font-weight: 500; }
 .f-b small { display: block; margin-top: 2px; font-family: var(--font-mono); font-size: calc(var(--s) * .036); text-transform: none; letter-spacing: 0; color: var(--ink-2); line-height: 1.2; font-weight: 400; }
 
 .title { padding-top: clamp(8px, 2vw, 24px); }
-.title h1 { font-size: clamp(2.6rem, 9.4vw, 8.6rem); line-height: .92; letter-spacing: -.05em; text-transform: uppercase; font-weight: 500; text-wrap: balance; }
+.title h1 { font-size: clamp(2.6rem, 9.4vw, 8.6rem); line-height: .92; letter-spacing: -.035em; text-transform: uppercase; font-weight: 500; text-wrap: balance; }
 .title p { margin-top: 18px; max-width: 46ch; font-size: clamp(1rem, 1.7vw, 1.2rem); line-height: 1.2; }
 
 .ticket { display: flex; flex-direction: column; justify-content: space-between; min-height: clamp(220px, 30vw, 340px); margin-top: clamp(24px, 4vw, 48px); padding: clamp(20px, 3vw, 36px); border: 1px solid var(--line); text-decoration: none; transition: background .25s, color .25s; }
 .ticket .t { display: flex; justify-content: space-between; font-size: clamp(1.1rem, 2.4vw, 1.6rem); }
-.ticket .b { font-size: clamp(2.4rem, 7vw, 6rem); line-height: .92; letter-spacing: -.05em; text-transform: uppercase; }
+.ticket .b { font-size: clamp(2.4rem, 7vw, 6rem); line-height: .92; letter-spacing: -.035em; text-transform: uppercase; }
 .ticket:hover { background: var(--orange); color: #0c0b0f; border-color: var(--orange); }
 
 /* о себе */
 .about { padding-top: clamp(56px, 9vw, 120px); }
-.about h2 { font-size: clamp(1.8rem, 5.4vw, 4rem); line-height: 1; letter-spacing: -.04em; font-weight: 500; text-wrap: balance; max-width: 22ch; }
+.about h2 { font-size: clamp(1.8rem, 5.4vw, 4rem); line-height: 1; letter-spacing: -.025em; font-weight: 500; text-wrap: balance; max-width: 22ch; }
 .about p { margin-top: 20px; max-width: 54ch; font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.25; }
 
 /* три портрета */
 .faces { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: clamp(20px, 3vw, 40px); margin-top: clamp(32px, 5vw, 64px); }
 .face-card .pic { position: relative; aspect-ratio: 1; }
 .face-card .pic canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
-.face-card h3 { margin-top: 12px; font-size: clamp(1.6rem, 3.6vw, 2.8rem); line-height: .95; letter-spacing: -.04em; text-transform: uppercase; font-weight: 500; }
+.face-card h3 { margin-top: 12px; font-size: clamp(1.6rem, 3.6vw, 2.8rem); line-height: .95; letter-spacing: -.025em; text-transform: uppercase; font-weight: 500; }
 .face-card .mono { display: block; margin-top: 8px; line-height: 1.5; text-transform: none; font-size: .78rem; }
 
 /* +N */
 .plus { margin-top: clamp(48px, 8vw, 112px); position: relative; }
 .plus .art { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
-.plus .n { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: clamp(6rem, 28vw, 22rem); line-height: .86; letter-spacing: -.04em; }
+.plus .n { font-family: var(--font-serif); font-style: italic; font-weight: 400; font-size: clamp(6rem, 28vw, 22rem); line-height: .86; letter-spacing: -.025em; }
 .plus .flower { aspect-ratio: 1; position: relative; }
 .plus .flower canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
-.plus h2 { margin: clamp(-24px, -3vw, -8px) 0 0 auto; width: min(100%, 720px); font-size: clamp(2.2rem, 7vw, 5.4rem); line-height: .94; letter-spacing: -.045em; text-transform: uppercase; font-weight: 500; text-wrap: balance; }
+.plus h2 { margin: clamp(-24px, -3vw, -8px) 0 0 auto; width: min(100%, 720px); font-size: clamp(2.2rem, 7vw, 5.4rem); line-height: .94; letter-spacing: -.03em; text-transform: uppercase; font-weight: 500; text-wrap: balance; }
 
 /* аккордеоны */
 .accs { margin-top: clamp(32px, 5vw, 64px); border-top: 1px solid var(--line); }
 .acc { border-bottom: 1px solid var(--line); }
-.acc summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: clamp(16px, 2.4vw, 28px) 0; font-size: clamp(1.4rem, 3.8vw, 2.9rem); line-height: 1; letter-spacing: -.04em; font-weight: 500; }
+.acc summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: clamp(16px, 2.4vw, 28px) 0; font-size: clamp(1.4rem, 3.8vw, 2.9rem); line-height: 1; letter-spacing: -.025em; font-weight: 500; }
 .acc summary::-webkit-details-marker { display: none; }
 .acc summary:hover { color: var(--orange); }
 .acc summary i { position: relative; flex: none; width: clamp(22px, 3vw, 34px); height: clamp(22px, 3vw, 34px); margin-top: .1em; }
@@ -131,13 +131,13 @@ ul { list-style: none; }
 .prog h2 { font-size: clamp(1.1rem, 2.4vw, 1.6rem); text-transform: uppercase; font-weight: 500; letter-spacing: -.01em; }
 .slot { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 16px; align-items: start; margin-top: clamp(28px, 4vw, 48px); }
 .slot img { width: 44px; height: 44px; object-fit: contain; }
-.slot .tm { grid-column: 2; font-size: clamp(1.8rem, 5vw, 3.2rem); line-height: 1; letter-spacing: -.04em; text-transform: uppercase; }
+.slot .tm { grid-column: 2; font-size: clamp(1.8rem, 5vw, 3.2rem); line-height: 1; letter-spacing: -.025em; text-transform: uppercase; }
 .slot .nm { grid-column: 2; font-size: clamp(1rem, 1.8vw, 1.3rem); line-height: 1.1; font-weight: 600; margin-top: 6px; }
 .slot .ds { grid-column: 2; max-width: 58ch; font-size: .98rem; line-height: 1.3; color: var(--ink-2); }
 .slot img { grid-row: 1 / span 3; }
 
 /* контакты */
-.contact h2 { font-size: clamp(2.2rem, 7.4vw, 6rem); line-height: .94; letter-spacing: -.05em; text-transform: uppercase; font-weight: 500; text-wrap: balance; max-width: 14ch; }
+.contact h2 { font-size: clamp(2.2rem, 7.4vw, 6rem); line-height: .94; letter-spacing: -.035em; text-transform: uppercase; font-weight: 500; text-wrap: balance; max-width: 14ch; }
 .links { margin-top: clamp(24px, 4vw, 48px); border-top: 1px solid var(--line); }
 .links a, .links button { display: flex; width: 100%; justify-content: space-between; align-items: center; gap: 16px; padding: clamp(14px, 2vw, 22px) 0; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink); text-decoration: none; font: inherit; font-size: clamp(1.3rem, 3.4vw, 2.4rem); letter-spacing: -.03em; text-transform: uppercase; text-align: left; cursor: pointer; }
 .links a:hover, .links button:hover { color: var(--orange); }
@@ -230,7 +230,7 @@ footer .inner { display: flex; flex-wrap: wrap; justify-content: space-between; 
 .cp { padding-top: clamp(20px, 3vw, 40px); padding-bottom: clamp(40px, 6vw, 80px); }
 .cp .back { display: inline-block; margin-bottom: 28px; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; color: var(--ink); }
 .cp .back:hover { color: var(--orange); border-color: var(--orange); }
-.cp h1 { margin-top: 10px; font-size: clamp(2.4rem, 7.6vw, 6rem); line-height: .92; letter-spacing: -.05em; text-transform: uppercase; font-weight: 500; text-wrap: balance; }
+.cp h1 { margin-top: 10px; font-size: clamp(2.4rem, 7.6vw, 6rem); line-height: .92; letter-spacing: -.035em; text-transform: uppercase; font-weight: 500; text-wrap: balance; }
 .cp-cover { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--tc); border: 1px solid var(--line); margin-top: 28px; }
 .cp-cover canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
 .cp .metric { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin-top: 32px; }
@@ -247,7 +247,7 @@ footer .inner { display: flex; flex-wrap: wrap; justify-content: space-between; 
 .cp-next a:hover { color: var(--orange); }
 @media (min-width: 960px) { .cp h1 { font-size: clamp(2.2rem, 4.8vw, 4.4rem); } .cp .metric b { font-size: clamp(3rem, 6.4vw, 5.6rem); } }
 
-.big-h { margin-top: clamp(48px, 8vw, 112px); font-size: clamp(3.4rem, 12vw, 10rem); line-height: .86; letter-spacing: -.055em; text-transform: uppercase; font-weight: 500; }
+.big-h { margin-top: clamp(48px, 8vw, 112px); font-size: clamp(3.4rem, 12vw, 10rem); line-height: .86; letter-spacing: -.025em; text-transform: uppercase; font-weight: 500; }
 .big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 .case-grid { grid-template-columns: 1fr !important; }
 .cc { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(14px, 2.4vw, 32px); align-items: end; }
@@ -261,7 +261,7 @@ footer .inner { display: flex; flex-wrap: wrap; justify-content: space-between; 
 .skl { margin-top: clamp(24px, 4vw, 48px); border-top: 1px solid var(--ink); }
 .skl li { display: flex; align-items: baseline; gap: 18px; padding: 12px 0; border-bottom: 1px solid var(--ink); transition: padding .25s, color .25s; }
 .skl li:hover { padding-left: 14px; color: var(--orange); }
-.skl b { font-weight: 500; font-size: clamp(1.5rem, 4.4vw, 3.2rem); letter-spacing: -.04em; text-transform: uppercase; line-height: 1; }
+.skl b { font-weight: 500; font-size: clamp(1.5rem, 4.4vw, 3.2rem); letter-spacing: -.025em; text-transform: uppercase; line-height: 1; }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: clamp(24px, 4vw, 48px); }
 .chip { border: 1px solid var(--ink); border-radius: 999px; padding: 10px 20px; font-size: clamp(1rem, 1.9vw, 1.4rem); letter-spacing: -.02em; }
 .chip.c0 { background: #ff9a6c; border-color: #ff9a6c; color: #0c0b0f; }
@@ -271,7 +271,7 @@ footer .inner { display: flex; flex-wrap: wrap; justify-content: space-between; 
 :root[data-theme="dark"] .chip.c2 { background: #fff; color: #0c0b0f; border-color: #fff; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .chip.c2 { background: #fff; color: #0c0b0f; border-color: #fff; } }
 
-h2.big-h { font-size: clamp(3.4rem, 12vw, 10rem); line-height: .86; letter-spacing: -.055em; text-transform: uppercase; font-weight: 500; margin-top: clamp(48px, 8vw, 112px); }
+h2.big-h { font-size: clamp(3.4rem, 12vw, 10rem); line-height: .86; letter-spacing: -.025em; text-transform: uppercase; font-weight: 500; margin-top: clamp(48px, 8vw, 112px); }
 h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 .prog .big-h { margin-bottom: clamp(8px, 2vw, 24px); }
 .face-card { border-top: 1px solid var(--ink); padding-top: 14px; }
@@ -295,7 +295,7 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 .cc .thumb { aspect-ratio: 16 / 7; }
 .cc .hov { position: absolute; inset: 0; z-index: 2; display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding: clamp(14px, 2.4vw, 32px); background: rgba(12, 11, 15, .0); color: #fff; opacity: 0; transition: opacity .35s, background .35s; }
 .cc .hov .mono { position: absolute; top: clamp(14px, 2.4vw, 32px); left: clamp(14px, 2.4vw, 32px); color: #fff; }
-.cc .hov b { font-weight: 500; font-size: clamp(2rem, 5.4vw, 4.6rem); line-height: .92; letter-spacing: -.045em; text-transform: uppercase; }
+.cc .hov b { font-weight: 500; font-size: clamp(2rem, 5.4vw, 4.6rem); line-height: .92; letter-spacing: -.03em; text-transform: uppercase; }
 .cc .hov i { font-style: normal; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1; }
 .cc:hover .hov, .cc:focus-visible .hov { opacity: 1; background: rgba(12, 11, 15, .42); }
 @media (hover: none) { .cc .hov { opacity: 1; background: linear-gradient(to top, rgba(12, 11, 15, .5), transparent 60%); } .cc .hov .mono { display: none; } .cc .hov b { font-size: clamp(1.4rem, 6vw, 2.2rem); } }
@@ -321,7 +321,7 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 .xacc summary { align-items: center; }
 .xacc .xs { display: grid; gap: 6px; }
 .xacc .xs em { font-style: normal; }
-.xacc .xs b { font-weight: 500; font-size: clamp(1.4rem, 3.4vw, 2.6rem); line-height: 1; letter-spacing: -.04em; text-transform: uppercase; }
+.xacc .xs b { font-weight: 500; font-size: clamp(1.4rem, 3.4vw, 2.6rem); line-height: 1; letter-spacing: -.025em; text-transform: uppercase; }
 .xacc .acc-body { max-width: 760px; gap: 0; }
 .xacc .ind { text-transform: none; line-height: 1.4; color: var(--ink-2); margin-bottom: 8px; }
 .xacc .ds { max-width: 70ch; line-height: 1.4; margin-top: 6px; }
@@ -355,7 +355,7 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 .top5 { list-style: none; margin: 8px 0 0; padding: 0; }
 .top5 li { display: grid; grid-template-columns: clamp(56px, 9vw, 110px) minmax(0, 1fr); gap: 16px; align-items: baseline; padding: clamp(14px, 2vw, 24px) 0; border-bottom: 1px solid var(--ink); }
 .top5 .n { font-family: var(--font-serif); font-style: italic; font-size: clamp(3rem, 8vw, 6.4rem); line-height: .85; color: var(--orange); }
-.top5 b { display: block; font-weight: 500; font-size: clamp(1.4rem, 3.4vw, 2.7rem); line-height: 1; letter-spacing: -.04em; text-transform: uppercase; }
+.top5 b { display: block; font-weight: 500; font-size: clamp(1.4rem, 3.4vw, 2.7rem); line-height: 1; letter-spacing: -.025em; text-transform: uppercase; }
 .top5 p { margin-top: 8px; color: var(--ink-2); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.3; max-width: 54ch; }
 .me-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(32px, 5vw, 56px); }
 .me-cta a { border: 1px solid var(--ink); border-radius: 999px; padding: 14px 26px; text-decoration: none; font-size: clamp(1rem, 1.8vw, 1.3rem); transition: background .25s; }
@@ -407,6 +407,22 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 #cp-gryadka { padding-bottom: 0; }
 #cp-gryadka iframe { display: block; width: calc(100% + 16px); margin-left: -16px; border: 0; min-height: 80vh; background: transparent; }
 #cp-gryadka .back { position: static; }
+
+/* опыт: больше воздуха между абзацами, заголовками, списками и результатом */
+.xacc .acc-body { padding-top: 8px; }
+.xacc .ind { margin-bottom: 18px; }
+.xacc .acc-body > .ds { margin-top: 0; margin-bottom: 8px; line-height: 1.5; }
+.xacc .xp { margin-top: clamp(40px, 5vw, 60px); }
+.xacc .xp > .ds { margin-top: 18px; line-height: 1.5; }
+.xacc .xp ul { margin-top: 20px; gap: 16px; }
+.xacc .xp li { line-height: 1.5; }
+.xacc .xp .res { margin-top: 28px; padding: 16px 18px; line-height: 1.5; }
+
+/* кнопка темы — в верхнем правом углу, на одной строке с «Главная» */
+.side-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; align-self: stretch; }
+.side-row .side-theme { margin: 0; white-space: nowrap; font-size: .78rem; text-transform: uppercase; }
+@media (max-width: 520px) { .top .inner { font-size: .92rem; } .top .r, .top .inner > span { white-space: nowrap; } }
+.nw { white-space: nowrap; }
 </style>
 
 <div class="layout">
@@ -415,7 +431,7 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
   <div class="inner">
     <span>Москва</span>
     <button class="burger" id="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="menu"><i></i></button>
-    <span class="r">UX/UI-дизайнер</span>
+    <span class="r">Продуктовый дизайнер</span>
   </div>
 </header>
 
@@ -440,7 +456,7 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
       </div>
     </div>
     <div class="inner title">
-      <h1>Бородина Дарья<br>Продуктовый дизайнер</h1>
+      <h1>Бородина Дарья</h1>
       <a class="ticket sky m" href="https://t.me/borodinushka" target="_blank" rel="noopener">
   <canvas class="sky-c" aria-hidden="true"></canvas>
   <span class="t"><span></span><span aria-hidden="true">↗</span></span>
@@ -451,7 +467,7 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 
   <section class="section about" id="about">
     <div class="inner">
-      <h2 class="rv">Проектирую сайты и интерфейсы, которые объясняют продукт с первого экрана и приводят заявки.</h2>
+      <h2 class="rv">Проектирую сайты и интерфейсы, которые объясняют продукт с первого экрана и приводят заявки</h2>
       <p class="rv"><a class="more" href="#me">Подробнее обо мне ↗</a></p>
       <div class="faces">
         <div class="face-card rv"><h3>Дизайн</h3><span class="mono">/UX Design, UI Design, Web Design/</span></div>
@@ -490,14 +506,14 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
     <div class="inner">
       <h2 class="big-h rv">Опыт</h2>
       <details class="acc xacc rv" open><summary><span class="xs"><em class="mono">2025 – настоящее время</em><b>UX/UI-дизайнер, IT-студия разработки «КОДНИЦА», Москва</b></span><i aria-hidden="true"></i></summary><div class="acc-body"><p class="ds">Веду 2–3 клиентских проекта параллельно от брифа до запуска, работаю в связке с фронтенд-разработчиком и проджект-менеджером, защищаю решения перед заказчиком</p><div class="xp"><h3>1. No Bullshit / Art Jungle — лендинги онлайн-школ (EdTech, B2C)</h3><p class="ds"><b>Задача:</b> по вебвизору 60% посетителей уходили с первого экрана, отдел продаж слышал от лидов один вопрос — «чем вы отличаетесь от других школ»</p><ul><li>Провела UX-аудит лендингов по вебвизору и картам скроллов: нашла, на каких блоках обрываются сессии</li><li>Разобрала 8 школ-конкурентов по матрице: оффер, цена, форматы, гарантии, социальные доказательства — выделила 3 преимущества, которых нет у других</li><li>Сформулировала гипотезы и пересобрала структуру от оффера до заявки: ценностное предложение и форматы — на первом экране, форма — в 1–2 кликах с любого экрана</li><li>Проверила новый первый экран A/B-тестом против старого на 50/50 трафика в течение 3 недель</li><li>Подключила amoCRM и цели в Метрике, чтобы считать заявки по источникам</li></ul><p class="res">Результат за 2 месяца по CRM: конверсия в заявку на пробное занятие — с 3,2% до 5,9% у NoBullshit и с 4,1% до 6,8% у Art Jungle</p></div><div class="xp"><h3>2. Illumur — многостраничный сайт AI-продакшна (B2B)</h3><p class="ds"><b>Задача:</b> потенциальные клиенты не понимали уровень продакшна и какая услуга подходит под задачу — менеджер тратил первый созвон на объяснение форматов</p><ul><li>Провела интервью с основателем и аккаунт-менеджером о частых вопросах клиентов</li><li>Выстроила информационную архитектуру вокруг сценария «посмотреть работы → понять формат → оставить запрос»</li><li>Сделала адаптивный UI-kit и шаблоны кейсов — новый кейс собирается за 3 часа вместо 6</li><li>Перестроила подачу портфолио с акцентом на кейсы и motion, часть визуалов сгенерировала в Midjourney и Runway</li><li>Собрала сайт на Tilda с Zero Block, настроила анимации и адаптивы</li></ul><p class="res">Результат за 3 месяца после запуска: конверсия в запрос на проект — с 1,6% до 4,1%, среднее время на сайте — с 1:50 до 2:03 (+12%)</p></div><div class="xp"><h3>3. GNG — платформа афиш и концертов (B2C)</h3><p class="ds"><b>Задача:</b> пользователи из соцсетей и мессенджеров не могли найти концерт артиста в своём городе, во встроенных браузерах часть афиш не загружалась</p><ul><li>Спроектировала user flow и поиск событий по артистам и городам</li><li>Написала на JavaScript динамическую подгрузку контента и пагинацию</li><li>Интегрировала сайт с API — афиши обновляются без ручной правки страниц</li><li>Нашла причину ошибок в Android и Telegram WebView: старые движки не поддерживали часть синтаксиса и IntersectionObserver — переписала скрипты на совместимый код и добавила фолбэк для подгрузки</li></ul><p class="res">Результат: афиши стабильно открываются во встроенных браузерах, отказы на мобильных снизились с 48% до 31%</p></div><div class="xp"><h3>4. Фирменный стиль: КОДНИЦА, Kubera, OPaperPaper</h3><ul><li>Разработала фирменный стиль и лендинг студии «КОДНИЦА»</li><li>Разработала айдентику инвестиционной компании Kubera: логотип, палитра, типографика, шаблоны презентаций</li><li>Для OPaperPaper подключила онлайн-оплату и доработала каталог товаров</li><li>Собрала для клиентов библиотеки шаблонов для сайта, соцсетей и печати — новый пост или баннер делается за 30–40 минут вместо 1,5 часа</li></ul></div></div></details>
-      <details class="acc xacc rv"><summary><span class="xs"><em class="mono">2024 – 2025</em><b>UX/UI-дизайнер, ООО «АГРОЛАЙТ», Москва</b></span><i aria-hidden="true"></i></summary><div class="acc-body"><p class="ind mono">Сельское хозяйство. Сельскохозяйственная продукция (продвижение, оптовая торговля)</p><p class="ds">Единственный дизайнер в компании, подчинялась генеральному директору. Выстроила дизайн-функцию с нуля: сайт, фирменный стиль, упаковка для массового производства, выставочные и печатные материалы</p><div class="xp"><h3>1. Редизайн корпоративного сайта</h3><p class="ds"><b>Задача:</b> B2B-клиенты и партнёры не могли разобраться в продуктовой линейке и найти контакт для заказа — менеджеры получали много звонков с вопросами, на которые отвечал сайт. Устаревший визуал снижал доверие к производителю</p><ul><li>Провела интервью с 3 менеджерами по продажам: собрала частые вопросы клиентов и этапы принятия решения о закупке</li><li>Построила CJM B2B-клиента от первого визита до запроса прайса и перестроила сайт вокруг продуктовой линейки из 40 позиций</li><li>Вынесла на карточки продуктов характеристики, документы и кнопку запроса — до контакта 1 клик с любой страницы</li><li>Разработала новую визуальную концепцию, часть фото и видео продукции сгенерировала в Midjourney и Runway</li><li>После запуска анализировала поведение пользователей и конверсию в Метрике и CRM, на основе данных приоритизировала дальнейшие изменения сайта</li></ul><p class="res">Результат за 4 месяца по Метрике и CRM: конверсия в заявку — с 2,0% до 2,2% (+10%), входящих запросов прайса — с 25 до 34 в месяц</p></div><div class="xp"><h3>2. Фирменный стиль, упаковка и полиграфия</h3><ul><li>Разработала логотип и фирменный стиль с гайдлайном</li><li>Спроектировала упаковку и этикетки для 25 SKU, тиражи — от 5 000 шт.</li><li>Сделала каталоги, буклеты и ролл-апы для 4 отраслевых выставок</li><li>Готовила макеты к печати (CMYK, вылеты, цветопробы) и контролировала тиражи напрямую с 3 типографиями</li></ul><p class="res">Результат: компания отказалась от внешних подрядчиков по полиграфии и упаковке; перепечаток из-за брака — 0 за год против 3 до меня; выставки, каталоги и упаковка оформлены в одной системе</p></div></div></details>
+      <details class="acc xacc rv"><summary><span class="xs"><em class="mono">2024 – 2025</em><b>UX/UI-дизайнер, ООО «АГРОЛАЙТ», Москва</b></span><i aria-hidden="true"></i></summary><div class="acc-body"><p class="ind mono">Сельское хозяйство. Сельскохозяйственная продукция (продвижение, оптовая торговля)</p><p class="ds">Единственный дизайнер в компании, подчинялась генеральному директору. Выстроила дизайн-функцию с нуля: сайт, фирменный стиль, упаковка для массового производства, выставочные и печатные материалы</p><div class="xp"><h3>1. Редизайн корпоративного сайта</h3><p class="ds"><b>Задача:</b> B2B-клиенты и партнёры не могли разобраться в продуктовой линейке и найти контакт для заказа — менеджеры получали много звонков с вопросами, на которые отвечал сайт. Устаревший визуал снижал доверие к производителю</p><ul><li>Провела интервью с 3 менеджерами по продажам: собрала частые вопросы клиентов и этапы принятия решения о закупке</li><li>Построила CJM B2B-клиента от первого визита до запроса прайса и перестроила сайт вокруг продуктовой линейки из 40 позиций</li><li>Вынесла на карточки продуктов характеристики, документы и кнопку запроса — до контакта 1 клик с любой страницы</li><li>Разработала новую визуальную концепцию, часть фото и видео продукции сгенерировала в Midjourney и Runway</li><li>После запуска анализировала поведение пользователей и конверсию в Метрике и CRM, на основе данных приоритизировала дальнейшие изменения сайта</li></ul><p class="res">Результат за 4 месяца по Метрике и CRM: конверсия в заявку — с 2,0% до 2,2% (+10%), входящих запросов прайса — с 25 до 34 в месяц</p></div><div class="xp"><h3>2. Фирменный стиль, упаковка и полиграфия</h3><ul><li>Разработала логотип и фирменный стиль с гайдлайном</li><li>Спроектировала упаковку и этикетки для 25 SKU, тиражи — от 5 000 шт</li><li>Сделала каталоги, буклеты и ролл-апы для 4 отраслевых выставок</li><li>Готовила макеты к печати (CMYK, вылеты, цветопробы) и контролировала тиражи напрямую с 3 типографиями</li></ul><p class="res">Результат: компания отказалась от внешних подрядчиков по полиграфии и упаковке; перепечаток из-за брака — 0 за год против 3 до меня; выставки, каталоги и упаковка оформлены в одной системе</p></div></div></details>
       <details class="acc xacc rv"><summary><span class="xs"><em class="mono">2023 – 2024</em><b>Веб-дизайнер, ООО «ВЕКТОР», Москва</b></span><i aria-hidden="true"></i></summary><div class="acc-body"><p class="ind mono">СМИ, маркетинг, реклама, BTL, PR, дизайн, продюсирование. Маркетинговые, рекламные, BTL, дизайнерские, Event-, PR-агентства, организация выставок</p><div class="xp"><ul><li>Работала в команде над коммерческими сайтами под руководством senior-дизайнера</li><li>Собирала сайты на Tilda по готовым макетам и адаптировала их под планшеты и мобильные</li><li>Перевела типовые страницы на компоненты и Auto Layout в Figma — сборка стала быстрее и ближе к макету</li><li>Проверяла консистентность и готовила проекты к релизу</li></ul></div></div></details>
     </div>
   </section>
 
   <section class="section contact" id="contact">
     <div class="inner">
-      <h2 class="rv">Давайте создадим что-то хорошее!</h2>
+      <h2 class="rv">Давайте создадим <span class="nw">что-то</span> хорошее!</h2>
       <div class="links rv">
         <a href="https://t.me/borodinushka" target="_blank" rel="noopener"><span>Telegram</span><span class="v">t.me/borodinushka ↗</span></a>
         <button type="button" id="copy"><span>Почта</span><span class="v" id="email">dborodina771@gmail.com</span></button>
@@ -533,11 +549,11 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
         <div class="me-grid">
           <figure class="me-photo"><div class="frame"><img id="mephoto" alt="Дарья Бородина"></div><figcaption class="mono">Дарья Бородина · Москва</figcaption></figure>
           <div class="me-text">
-            <p class="lead1">Я UX/UI дизайнер, работала с EdTech, IT и AI-продакшном, инвестиционными и event-проектами, а также с B2B-производством. В каждой нише начинаю с пользователя: что он должен понять на первом экране, где сомневается и что мешает ему оставить заявку.</p>
+            <p class="lead1">Я UX/UI дизайнер, работала с EdTech, IT и AI-продакшном, инвестиционными и event-проектами, а также с B2B-производством. В каждой нише начинаю с пользователя: что он должен понять на первом экране, где сомневается и что мешает ему оставить заявку</p>
             <div class="chips"><span class="chip">EdTech</span><span class="chip">IT</span><span class="chip">AI-продакшн</span><span class="chip">Инвестиции</span><span class="chip">Event</span><span class="chip">B2B-производство</span></div>
           </div>
         </div>
-        <blockquote>Моя сильная сторона в сочетании дизайна и технической реализации. Могу выйти за пределы конструктора с помощью кастомного кода, найти баг в мобильном WebView и подготовить упаковку к массовому тиражу.</blockquote>
+        <blockquote>Моя сильная сторона в сочетании дизайна и технической реализации. Могу выйти за пределы конструктора с помощью кастомного кода, найти баг в мобильном WebView и подготовить упаковку к массовому тиражу</blockquote>
         <h2 class="mono top5-h">ТОП-5 результатов</h2>
         <ol class="top5"><li class="rv"><span class="n">1</span><div><b>~на 20–30%</b><p>Рост заявок на проекты AI-продакшна Illumur ~на 20–30% после запуска нового сайта</p></div></li><li class="rv"><span class="n">2</span><div><b>~на 10–15%</b><p>Рост конверсии в заявку на пробное занятие для EdTech-лендингов ~на 10–15%</p></div></li><li class="rv"><span class="n">3</span><div><b>С нуля</b><p>Выстроила дизайн-функцию в «АГРОЛАЙТ» с нуля: сайт, бренд, упаковка, полиграфия без внешних подрядчиков</p></div></li><li class="rv"><span class="n">4</span><div><b>API на Tilda</b><p>Реализовала динамическую подгрузку и API-интеграцию на Tilda для платформы афиш GNG</p></div></li><li class="rv"><span class="n">5</span><div><b>~в 2 раза</b><p>Ускорила запуск новых страниц кейсов ~в 2 раза за счёт UI-kit и шаблонов</p></div></li></ol>
         <div class="me-cta"><a href="#cases">Смотреть проекты ↗</a><a href="#hero">На главную ↑</a><a href="https://t.me/borodinushka" target="_blank" rel="noopener">Написать в Telegram ↗</a></div>
@@ -554,13 +570,12 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 <aside class="side" aria-label="Разделы">
   <div class="side-in">
     <nav class="side-nav">
-      <a href="#hero" data-nav="hero">Главная</a>
+      <div class="side-row"><a href="#hero" data-nav="hero">Главная</a><button class="mono side-theme" data-theme-btn type="button">Сменить тему</button></div>
       <a href="#me" data-nav="me">Обо мне</a>
       <a href="#cases" data-nav="cases">Проекты</a>
       <a href="#skills" data-nav="skills">Навыки</a>
       <a href="#experience" data-nav="experience">Опыт</a>
       <a href="#contact" data-nav="contact">Контакты</a>
-      <button class="mono side-theme" data-theme-btn type="button">◐ Сменить тему</button>
     </nav>
     <a class="ticket sky" href="https://t.me/borodinushka" target="_blank" rel="noopener">
       <canvas class="sky-c" aria-hidden="true"></canvas>
@@ -1408,10 +1423,10 @@ h3{font-weight:700}
     <div class="sev-col">
       <div class="sev-bar"><span class="crit" style="flex:4">4 критичные</span><span class="rest" style="flex:20">20 остальных</span></div>
       <ol class="au-list">
-        <li><b>Метафора не объяснена.</b> Нет онбординга: после входа сразу ферма с готовыми словами</li>
-        <li><b>Состояния растений не читаются.</b> Доход останавливается в срок полива, но на сцене это обычная капля. «Плачущая» появляется через 24 часа, а карточка сразу пишет «засохло — полить срочно»</li>
-        <li><b>Экономика нечитаема.</b> «+20» — разовый бонус, но выглядит как доход. «~2 д» не подписано, числа без разделителей, дробные монеты</li>
-        <li><b>Навигация перегружена.</b> Все элементы вверху, нижняя половина пуста, «Выйти» стоит рядом с игровыми действиями</li>
+        <li><b>Метафора не объяснена</b> Нет онбординга: после входа сразу ферма с готовыми словами</li>
+        <li><b>Состояния растений не читаются</b> Доход останавливается в срок полива, но на сцене это обычная капля. «Плачущая» появляется через 24 часа, а карточка сразу пишет «засохло — полить срочно»</li>
+        <li><b>Экономика нечитаема</b> «+20» — разовый бонус, но выглядит как доход. «~2 д» не подписано, числа без разделителей, дробные монеты</li>
+        <li><b>Навигация перегружена</b> Все элементы вверху, нижняя половина пуста, «Выйти» стоит рядом с игровыми действиями</li>
       </ol>
       <p class="cap">Второстепенные: посадка слова собирает три способа ввода и выбор растения на одном экране, плоская иерархия верхней плашки, мелкие иконки таб-бара, эмодзи вместо иконок</p>
     </div>
@@ -1511,11 +1526,11 @@ h3{font-weight:700}
     <table class="t">
       <thead><tr><th>Тема</th><th>Варианты</th><th>Выбор и почему</th></tr></thead>
       <tbody>
-        <tr><td><b>Навигация</b></td><td>Кнопки вверху · ряд кнопок над фермой · нижний таб-бар</td><td><b>Таб-бар.</b> Действия в зоне большого пальца, верх экрана свободен. Три схемы сравнивала в Figma</td></tr>
-        <tr><td><b>Онбординг</b></td><td>Тур из нескольких экранов · первая посадка с подсказками</td><td><b>Первая посадка.</b> Механика видна в действии, меньше трения до первого результата</td></tr>
-        <tr><td><b>Состояния</b></td><td>Поправить текст карточки · единая система для сцены и карточки</td><td><b>Единая система.</b> Расхождение подрывает доверие к механике, правка текста его не убирает</td></tr>
-        <tr><td><b>Посадка</b></td><td>Одна длинная форма · два шага</td><td><b>Два шага.</b> Один вопрос на экран, способы добавить слово не конкурируют с выбором растения</td></tr>
-        <tr><td><b>Доход</b></td><td>Одно число · два разных числа</td><td><b>Два числа.</b> Бонус и доход — разные вещи, смешение даёт неверные ожидания</td></tr>
+        <tr><td><b>Навигация</b></td><td>Кнопки вверху · ряд кнопок над фермой · нижний таб-бар</td><td><b>Таб-бар</b> Действия в зоне большого пальца, верх экрана свободен. Три схемы сравнивала в Figma</td></tr>
+        <tr><td><b>Онбординг</b></td><td>Тур из нескольких экранов · первая посадка с подсказками</td><td><b>Первая посадка</b> Механика видна в действии, меньше трения до первого результата</td></tr>
+        <tr><td><b>Состояния</b></td><td>Поправить текст карточки · единая система для сцены и карточки</td><td><b>Единая система</b> Расхождение подрывает доверие к механике, правка текста его не убирает</td></tr>
+        <tr><td><b>Посадка</b></td><td>Одна длинная форма · два шага</td><td><b>Два шага</b> Один вопрос на экран, способы добавить слово не конкурируют с выбором растения</td></tr>
+        <tr><td><b>Доход</b></td><td>Одно число · два разных числа</td><td><b>Два числа</b> Бонус и доход — разные вещи, смешение даёт неверные ожидания</td></tr>
       </tbody>
     </table>
   </div>
@@ -1577,7 +1592,7 @@ h3{font-weight:700}
       </div>
       <div class="g-btn">Полить</div>
     </div>
-    <div class="scr-tx"><span class="kick">Карточка растения · экономика</span><h3>Главное действие очевидно, каждое число подписано</h3><ul class="dl"><li><b>«Полить» — единственная главная кнопка.</b> Состояние и последствие — строкой над ней: «доход остановлен»</li><li><b>Доход и урожай разделены.</b> «3 в час» и «+20 разово» больше не путаются. «~2 д» стало «созреет через 2 дня»</li><li><b>Целые числа с разделителями.</b> 1 240 вместо 1240.5, монеты в шапке крупнее ника и открывают историю дохода</li><li><b>Ускорители — только когда они есть.</b> Новичок не видит пустой блок и не упирается в тупик</li></ul></div>
+    <div class="scr-tx"><span class="kick">Карточка растения · экономика</span><h3>Главное действие очевидно, каждое число подписано</h3><ul class="dl"><li><b>«Полить» — единственная главная кнопка</b> Состояние и последствие — строкой над ней: «доход остановлен»</li><li><b>Доход и урожай разделены</b> «3 в час» и «+20 разово» больше не путаются. «~2 д» стало «созреет через 2 дня»</li><li><b>Целые числа с разделителями</b> 1 240 вместо 1240.5, монеты в шапке крупнее ника и открывают историю дохода</li><li><b>Ускорители — только когда они есть</b> Новичок не видит пустой блок и не упирается в тупик</li></ul></div>
   </div>
 
   <div class="scr2 rev">
@@ -1590,7 +1605,7 @@ h3{font-weight:700}
       <div class="g-word"><b>사랑</b><span>любовь</span></div>
       <div class="g-btn">Посадить</div>
     </div>
-    <div class="scr-tx"><span class="kick">Онбординг</span><h3>Сначала сажаешь, потом регистрируешься</h3><ul class="dl"><li><b>Три шага вместо тура.</b> Посадить слово → полить его → увидеть первые монеты. Механика понятна за минуту</li><li><b>Регистрация после первой награды.</b> Человек уже вложился и видит, что теряет без аккаунта</li><li><b>Подсказки по событию.</b> Короткая подсказка при первом поливе, первом неполитом растении и первой покупке</li></ul></div>
+    <div class="scr-tx"><span class="kick">Онбординг</span><h3>Сначала сажаешь, потом регистрируешься</h3><ul class="dl"><li><b>Три шага вместо тура</b> Посадить слово → полить его → увидеть первые монеты. Механика понятна за минуту</li><li><b>Регистрация после первой награды</b> Человек уже вложился и видит, что теряет без аккаунта</li><li><b>Подсказки по событию</b> Короткая подсказка при первом поливе, первом неполитом растении и первой покупке</li></ul></div>
   </div>
 
   <div class="scr2">
@@ -1603,7 +1618,7 @@ h3{font-weight:700}
       <div class="q-opts"><span class="right">любовь</span><span>дружба</span><span>сердце</span><span>весна</span></div>
       <div class="q-res"><i class="drop"></i><b>Полито</b><span>Доход снова идёт: 3 монеты в час</span></div>
     </div>
-    <div class="scr-tx"><span class="kick">Полив</span><h3>Короткая сессия с мгновенной наградой</h3><ul class="dl"><li><b>Все растения, которым пора полить, — одной сессией.</b> Кнопка «Полить 3 растения» на ферме вместо трёх отдельных заходов в карточки</li><li><b>Прогресс «1 из 3».</b> Видно, сколько осталось, сессия занимает меньше минуты</li><li><b>Награда сразу.</b> После верного ответа — анимация полива и строка «доход снова идёт»</li></ul></div>
+    <div class="scr-tx"><span class="kick">Полив</span><h3>Короткая сессия с мгновенной наградой</h3><ul class="dl"><li><b>Все растения, которым пора полить, — одной сессией</b> Кнопка «Полить 3 растения» на ферме вместо трёх отдельных заходов в карточки</li><li><b>Прогресс «1 из 3»</b> Видно, сколько осталось, сессия занимает меньше минуты</li><li><b>Награда сразу</b> После верного ответа — анимация полива и строка «доход снова идёт»</li></ul></div>
   </div>
 
   <div class="scr2 rev">
@@ -1616,7 +1631,7 @@ h3{font-weight:700}
       <div class="g-hint">Подборки TOPIK I и II — по уровню</div>
       <div class="g-btn bottom">Дальше: выбрать растение</div>
     </div>
-    <div class="scr-tx"><span class="kick">Посадка слова</span><h3>Два шага вместо одного перегруженного экрана</h3><ul class="dl"><li><b>Сначала слово.</b> Три способа добавить — переключателем, а не тремя формами на одном экране</li><li><b>Потом растение.</b> Параметры подписаны: доход, время созревания, урожай</li><li><b>Клавиатура не перекрывает кнопку.</b> Экран рассчитан на поведение клавиатуры в Capacitor</li></ul></div>
+    <div class="scr-tx"><span class="kick">Посадка слова</span><h3>Два шага вместо одного перегруженного экрана</h3><ul class="dl"><li><b>Сначала слово</b> Три способа добавить — переключателем, а не тремя формами на одном экране</li><li><b>Потом растение</b> Параметры подписаны: доход, время созревания, урожай</li><li><b>Клавиатура не перекрывает кнопку</b> Экран рассчитан на поведение клавиатуры в Capacitor</li></ul></div>
   </div>
 
   <div class="scr2">
@@ -1638,7 +1653,7 @@ h3{font-weight:700}
       <div class="g-btn">Купить грядку за 150</div>
       <div class="g-tab"><span class="on">Ферма</span><span>Коллекция</span><span>Магазин</span><span>Профиль</span></div>
     </div>
-    <div class="scr-tx"><span class="kick">Покупка грядки</span><h3>Цена на виду, а не в подсказке</h3><ul class="dl"><li><b>Понятное название.</b> Вкладка «Грядка» конкурировала с главным экраном. Теперь действие называется «Новая грядка» и сразу показывает цену</li><li><b>Режим выбора клетки.</b> Доступные клетки подсвечены с ценой, нажатие покупает грядку</li><li><b>Причина вместо серой кнопки.</b> Если монет не хватает или рядом нет посадок, так и пишем</li></ul></div>
+    <div class="scr-tx"><span class="kick">Покупка грядки</span><h3>Цена на виду, а не в подсказке</h3><ul class="dl"><li><b>Понятное название</b> Вкладка «Грядка» конкурировала с главным экраном. Теперь действие называется «Новая грядка» и сразу показывает цену</li><li><b>Режим выбора клетки</b> Доступные клетки подсвечены с ценой, нажатие покупает грядку</li><li><b>Причина вместо серой кнопки</b> Если монет не хватает или рядом нет посадок, так и пишем</li></ul></div>
   </div>
 
   <h3>Состояния интерфейса</h3>
@@ -1767,7 +1782,7 @@ h3{font-weight:700}
 :root[data-theme="dark"]{--bg:#0d0c10;--surface:#0d0c10;--ink:#f4eff3;--muted:#a59eae;--line:#f4eff3;--navy:#f4eff3;--navy2:#f4eff3;--red:#ff7a70;--green:#4cd392;--red-soft:transparent;--green-soft:transparent;--amber-soft:transparent}
 .app,.gp,.lock,.mini-app,.hero-phones{--lime:#F2B81C;--on-lime:#1C2410}
 body{font-weight:500;line-height:1.4;-webkit-font-smoothing:antialiased}
-h1,h2{text-transform:uppercase;font-weight:500;letter-spacing:-.045em;line-height:.95}
+h1,h2{text-transform:uppercase;font-weight:500;letter-spacing:-.03em;line-height:.95}
 h1{font-size:clamp(2.2rem,5.6vw,4.6rem)}
 h2{font-size:clamp(1.7rem,3.6vw,2.8rem)}
 h3{font-weight:600;letter-spacing:-.03em}
