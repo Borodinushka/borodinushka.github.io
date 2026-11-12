@@ -436,6 +436,22 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 .flrise img { display: block; width: 100%; height: auto; max-height: 46vh; object-fit: contain; object-position: center bottom; pointer-events: none; transform: translate3d(0, 104%, 0); transition: transform 1.4s cubic-bezier(.22, 1, .36, 1); will-change: transform; }
 .flrise.on img { transform: none; }
 @media (prefers-reduced-motion: reduce) { .flrise img { transition: none; } }
+
+/* контакты на весь экран */
+.contact { min-height: calc(100svh - var(--ftr, 76px)); display: flex; flex-direction: column; padding-top: clamp(76px, 8vw, 104px); padding-bottom: 0; box-sizing: border-box; }
+.contact .inner { flex: 1; display: flex; flex-direction: column; width: 100%; }
+.contact h2 { margin: 0; }
+.contact .links { flex: 1; display: flex; flex-direction: column; margin-top: clamp(20px, 3.2vw, 40px); }
+.contact .links a, .contact .links button { flex: 1 1 0; min-height: 60px; padding-block: 0; }
+/* отступ под цветы: они чуть налезают только на низ подвала */
+footer { padding-top: calc(var(--flh, 0px) - 56px - 24px); position: relative; z-index: 61; }
+.contact h2 { max-width: 14ch; font-size: clamp(2.2rem, 5.4vw, 5.2rem); }
+.contact .links a, .contact .links button { min-height: 54px; }
+.flrise img { max-height: 38vh; }
+.contact { padding-top: clamp(96px, 14svh, 160px); }
+.contact h2 { font-size: clamp(2.2rem, 4.6vw, 4.8rem); }
+.contact .links a, .contact .links button { min-height: 48px; }
+.contact h2 { max-width: none; }
 </style>
 
 <div class="layout">
@@ -526,7 +542,7 @@ h2.big-h.sub { margin-top: clamp(40px, 6vw, 80px); }
 
   <section class="section contact" id="contact">
     <div class="inner">
-      <h2 class="rv">Давайте создадим <span class="nw">что-то</span> хорошее!</h2>
+      <h2 class="rv">Давайте<br>создадим<br><span class="nw">что-то</span> хорошее!</h2>
       <div class="links rv">
         <a href="https://t.me/borodinushka" target="_blank" rel="noopener"><span>Telegram</span><span class="v">t.me/borodinushka ↗</span></a>
         <button type="button" id="copy"><span>Почта</span><span class="v" id="email">dborodina771@gmail.com</span></button>
@@ -2013,7 +2029,9 @@ footer{border-top:1px solid var(--ink)}
     window.addEventListener('scroll', upd, { passive: true });
   })();
 
-  /* шоты: видео идут друг за другом, играют только когда видны */
+  
+(function(){var f=document.querySelector('footer');if(!f)return;function s(){var im=document.querySelector('#flrise img'),r=document.documentElement.style;if(im)r.setProperty('--flh',Math.round(im.getBoundingClientRect().height)+'px');r.setProperty('--ftr',f.offsetHeight+'px');}s();addEventListener('resize',s);addEventListener('load',s);var im0=document.querySelector('#flrise img');if(im0)im0.addEventListener('load',s);})();
+/* шоты: видео идут друг за другом, играют только когда видны */
   var vids = document.querySelectorAll('.reel video');
   vids.forEach(function (v) { v.muted = true; if (v.readyState >= 1) v.parentNode.classList.add('ok'); v.addEventListener('loadedmetadata', function () { v.parentNode.classList.add('ok'); }); v.addEventListener('loadeddata', function () { v.parentNode.classList.add('ok'); }); });
   if ('IntersectionObserver' in window) {
