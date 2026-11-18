@@ -526,6 +526,11 @@ footer { padding-top: calc(var(--flh, 0px) - 56px - 24px); position: relative; z
 #me .me{padding-top:0}
 .me h2.big-h{margin-top:clamp(48px,8vw,112px)}
 #experience.prog{padding-top:clamp(56px,9vw,120px)}
+
+/* одинаковый отступ перед большими заголовками = как между «Навыки» и «Стек» */
+#cases.section,#me.section,#skills.section,#experience.prog{padding-top:clamp(40px,6vw,80px);scroll-margin-top:64px}
+#cases h2.big-h:first-child,#me .me h2.big-h:first-child,#skills .inner>h2.big-h:first-child,#experience h2.big-h:first-child{margin-top:0}
+#me .me{padding-bottom:0}
 </style>
 
 <div class="layout">
@@ -539,8 +544,8 @@ footer { padding-top: calc(var(--flh, 0px) - 56px - 24px); position: relative; z
 
 <nav class="menu" id="menu" aria-label="Разделы">
   <a href="#hero">Главная</a>
-  <a href="#me">Обо мне</a>
   <a href="#cases">Проекты</a>
+  <a href="#me">Обо мне</a>
   <a href="#skills">Навыки</a>
   <a href="#experience">Опыт</a>
   <a href="#contact">Контакты</a>
@@ -661,8 +666,8 @@ footer { padding-top: calc(var(--flh, 0px) - 56px - 24px); position: relative; z
   <div class="side-in">
     <nav class="side-nav">
       <div class="side-row"><a href="#hero" data-nav="hero">Главная</a><button class="mono side-theme" data-theme-btn type="button" aria-label="Сменить тему" title="Сменить тему"><svg class="ic ic-sun" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7"/></svg><svg class="ic ic-moon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4 8.2 8.2 0 1 0 20 14.2z"/></svg></button></div>
-      <a href="#me" data-nav="me">Обо мне</a>
       <a href="#cases" data-nav="cases">Проекты</a>
+      <a href="#me" data-nav="me">Обо мне</a>
       <a href="#skills" data-nav="skills">Навыки</a>
       <a href="#experience" data-nav="experience">Опыт</a>
       <a href="#contact" data-nav="contact">Контакты</a>
